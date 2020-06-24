@@ -29,7 +29,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class FileServiceImpl implements FileService {
 
-    private final String pathOut = "/data/out/";
+    private final String pathOut = File.separator.concat("data")
+                                                .concat(File.separator)
+                                                .concat("out")
+                                                .concat(File.separator);
 
     private final String pathIn = File.separator.concat("data")
                                                 .concat(File.separator)
